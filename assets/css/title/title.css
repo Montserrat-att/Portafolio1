@@ -1,0 +1,251 @@
+.title{
+    width: 100%;
+    height: 280px;
+}
+
+.title__div {
+  background: linear-gradient(45deg, #09456c, #195e63);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 280px;
+}
+
+.title__container__principal {
+  background: transparent;
+  width: 300px;
+  height: 300px;
+  margin-top: 40px;
+  perspective: 1000px;
+  /* opacity: 100%;
+  transition: 2s ease; */
+}
+
+.title__container__inner{
+  /* position: relative; */
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.4s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.title__container__principal:hover .title__container__inner{
+  transform: rotateY(180deg);
+}
+
+.title__container__profile,
+.title__container__profile__back {
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  margin: auto;
+}
+
+.title__container__profile__back{
+  transform: rotateY(180deg);
+}
+
+.title__profile{
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  border: 8px solid white;
+  box-shadow: 0 0 8px 4px rgba(72, 72, 72, 0.8);
+  border-radius: 50%;
+}
+
+.title__profile__back{
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  border: 8px solid white;
+  box-shadow: 0 0 8px 4px rgba(72, 72, 72, 0.8);
+  border-radius: 50%;
+}
+
+
+.title__container__principal.active,
+.title__profile.active,
+.title__profile__back.active {
+  opacity: 0;
+  transition: 1s ease;
+}
+
+
+/* @keyframes wiggle-rotation {
+    0% {transform: rotate(0deg) translate3d(0,0,0);}
+    25% {transform: rotate(3deg) translate3d(0,0,0);}
+    50% {transform: rotate(-3deg) translate3d(0,0,0);}
+    75% {transform: rotate(1deg) translate3d(0,0,0);}
+    100% {transform: rotate(0deg) translate3d(0,0,0);}
+}
+
+
+@keyframes storm {
+    0%{transform: translate3d(0, 0, 0) translateZ(0);}
+    25%{transform: translate3d(4px, 0, 0) translateZ(0);}
+    50%{transform: translate3d(-3px, 0, 0) translateZ(0);}
+    75%{transform: translate3d(2px, 0, 0) translateZ(0);}
+    100%{transform: translate3d(0, 0, 0) translateZ(0);}
+} */
+
+/* .title__container__profile:hover {
+    animation: wiggle-rotation 0.7s ease-in-out both;
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.6s;
+}
+
+.title__container__profile:hover .title__profile {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.6s;
+} */
+
+.title__container {
+  width: 50%;
+  margin-right: 5%;
+}
+
+.title__bio {
+  color: white;
+  font-size: 28px;
+  margin-top: 60px;
+}
+
+.title__subsection {
+  color: white;
+  font-size: 16px;
+}
+
+.title__container__network{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.title__network {
+  display: flex;
+  width: 150px;
+  height: 40px;
+  margin: auto;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.title__contenedor__img{
+  background: transparent;
+  width: 35px;
+  height: 35px;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.tittle__network__icon{
+  width: 30px;
+  height: 30px;
+  margin-top: 3px;
+  visibility: visible;
+}
+
+.title__contenedor__img:hover{
+  visibility: visible;
+}
+
+@media (max-width: 1860px) {
+  .title__bio {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .title__container {
+    width: 55%;
+  }
+
+}
+
+@media (max-width: 1258px) {
+
+    .title{
+        width: 100%;
+        height: 520px;
+    }
+    
+  .title__div {
+    flex-direction: column;
+    align-items: center;
+    height: 430px;
+  }
+
+  .title__container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .title__container__profile{
+    width: 300px;
+    height: 300px;
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .title__profile{
+    width: 260px;
+    height: 260px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .title__div {
+    height: 470px;
+  }
+
+  .title__container__profile {
+    width: 250px;
+    height: 250px;
+  }
+
+  .title__profile{
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 570px){
+  
+  .title__bio{
+    margin-top: 100px;
+  }
+
+  .tittle__container{
+    height: 300px;
+    padding-top: 100px;
+  }
+
+  .title__container__principal{
+    width: 210px;
+  }
+  
+  .title__container__inner{
+    width: 200px;
+    height: 200px;
+  }
+  .title__container__profile {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .title__profile{
+    width: 200px;
+    height: 200px;
+    margin: 0;
+  }
+}
